@@ -1,0 +1,20 @@
+﻿@model IEnumerable<WebApplication4.Models.Person>
+
+<h1>Persons</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+    </tr>
+    @foreach (var person in Model)
+    {
+        <tr>
+            <td>@person.Name</td>
+            <td>@person.Age</td>
+            <td>@person.Email</td>
+        </tr>
+    }
+</table>
+
+<a href="@Url.Action("Upload")">Upload CSV</a>
